@@ -1,0 +1,43 @@
+<style>
+  @import './Layout.css';
+</style>
+
+<script>
+  // Add this script at the end of your HTML body or in a separate .js file
+
+// Get the scroll-to-top element
+const scrollToTop = document.getElementById("scrollToTop");
+
+// Show the scroll-to-top button when scrolling down
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    document.body.classList.add("show-scroll-to-top");
+  } else {
+    document.body.classList.remove("show-scroll-to-top");
+  }
+});
+
+</script>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Simardeep Singh</title>
+  </head>
+    <body>
+    <div class="wrapper">
+      <ul class="bg-bubbles">
+        <li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li>
+      </ul>
+    </div>
+    <main>
+      <slot></slot>
+    </main>
+    <div class="scroll-up-btn show">
+      <a href="#top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+</body>
+</html>

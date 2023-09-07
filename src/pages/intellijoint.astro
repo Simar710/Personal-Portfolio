@@ -1,0 +1,171 @@
+---
+import Layout from "../components/Layout.astro"
+---
+
+<Layout>
+    <style>
+      @import './camis.css';
+    </style>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("projectImage");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 4 seconds
+        }
+    </script>
+        <section class="projectPage">
+            <img src="Intellijoint.jpg" alt="Intellijoint Surgical" class="header-image">
+            <div class="introduction">
+                <h2>Introduction</h2>
+                <p>
+                    Intellijoint Surgical is a Canadian medical device company that provides minimally invasive,
+                patient-specific joint replacement surgery. It manufactures and markets surgical navigation systems that
+                enable orthopedic surgeons to provide precision in joint replacement surgery. The company's technology
+                uses a combination of 3D imaging and advanced analytics to create a 3D model of the patient's anatomy,
+                allowing the surgeon to plan, navigate, and perform the surgery with greater accuracy. The company's
+                technology is designed to reduce the risk of complications associated with joint replacement surgery,
+                and to improve patient outcomes.
+                </p>
+            </div>
+            <h2 class="project">Goals and Job Description</h2>
+            <div class="projectList">
+                <div class="projectOne">
+                    <div><strong>There were some goals that I designed while working at Intellijoint Surgical.</strong></div>
+                    <div>They are listed below:</div>
+                    <p>
+                        <strong>GOAL 1: </strong> Learn Automated Testing <br>
+                    <strong>Action Plan 1: </strong> Get familiar with the company's website. <br>
+                    Learn to use CodeceptJS and Playwright <br>
+                    Observing how the experienced members work <br>
+                    <strong>Measure of Success 1: </strong> Understood the working of the team. <br>
+                    I was excited to learn automated testing and became very fluent in writing automated tests <br>
+                    <br>
+                    <strong>GOAL 2: </strong> To learn different types of testing. <br>
+                    <strong>Action Plan 2: </strong>Learn Regression Testing <br>
+                    Learn V&V Testing<br>
+                    Learn Automated Testing<br>
+                    <strong>Measure of Success 2: </strong> Learned and gained experience in all three types of testing
+                    <br>
+                    <br>
+                    <strong>GOAL 3: </strong> Manage time for both learning and accomplishing the task. <br>
+                    <strong>Action Plan 3: </strong>I Make a timetable for each day in the morning. <br>
+                    Takes out time to learn extra using udemy access provided by the company<br>
+                    <strong>Measure of Success 3: </strong> Learned React. Successfully following the timetable, making
+                    changes as
+                    needed
+                    to it according to the task I have to complete. <br>
+                    <br>
+                    <strong>GOAL 4: </strong> Honing observation skills <br>
+                    <strong>Action Plan 4: </strong>Try to understand what I read by practicing it. <br>
+                    Try to understand how the experienced team members and how they propose solutions to problems <br>
+                    Take help from others. <br>
+                    <strong>Measure of Success 4: </strong> I was able to learn by observing only.<br>
+                    I also proposed some improvements that can be made to make the Intellijoint VIEW website better and
+                    pointed out some issues with the software. <br>
+                    <br>
+                    <strong>GOAL 5: </strong> Learn to create and execute test plans. <br>
+                    <strong>Action Plan 5: </strong>Look at the different test plans that are already created by
+                    different team members. <br>
+                    Surf through the internet to understand them. <br>
+                    Take help from seniors and co-workers. <br>
+                    <strong>Measure of Success 5: </strong> Created test scenarios successfully. <br>
+                    Working on creating detailed test plans using JIRA<br>
+                    Executing Test plans. <br>
+                </p>
+    
+                </div>
+                <div class="projectTwo">
+                    <strong>
+                        <div>My Job Description</div>    
+                    </strong>
+                    <div>Let's peek into what I did at my job:</div>
+                    <p>
+    
+                    <div>At Intellijoint Surgical, I worked closely with the software test team to ensure the quality of the
+                        products. I learned to have excellent problem solving and communication skills, and was eager to
+                        learn and apply new tools and technologies.
+                        <br>
+                        <br>
+                        <strong>Responsibilities:</strong>
+
+                        <li> Develop and execute software test plans, including manual and automated test cases.</li>
+                        <li>Monitor and report on software test results.</li>
+                        <li>Identify, analyze, and document defects.</li>
+                        <li>Participate in daily scrum meetings.</li>
+                        <li>Follow established software development processes and best practices.</li>
+                        <li>Collaborate with software development and product teams.</li>
+                        <li>Provide feedback and suggestions on product quality to the software test team.</li>
+    
+                    </div>
+                    </p>
+                    <div class="conclusion">
+                        <h2>Conclusion</h2>
+                        <p>
+                            My experience working as a Software Test Co-op at Intellijoint Surgical was one of the most
+            rewarding experiences I have had in my career. I was able to learn a lot about software testing and develop
+            a wide range of skills in the process. At Intellijoint Surgical, I was responsible for performing various
+            types of software tests on the company's products. These tests ranged from unit tests to integration tests
+            and system tests. I was also responsible for writing test plans and test cases, as well as executing them. I
+            was also involved in the development and maintenance of automated test scripts. This was done in order to
+            ensure that the software was functioning properly and that the tests were being performed accurately. I was
+            also responsible for creating and maintaining test databases, as well as reporting any issues that were
+            encountered during the testing process. Overall, my experience at Intellijoint Surgical was extremely
+            valuable. I was able to gain a great deal of knowledge and experience that I can use in future positions. I
+            am grateful for the opportunity to work with such a great team and to be a part of a successful
+            organization.
+                        </p>
+                    </div>
+                    <div class="projectImage">
+                        <img src="Intellijoint.jpg" alt="Intellijoint Logo">
+                        <div class="description">Intellijoint Surgical (1 / 6)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="Confluence.jpeg" alt="Confluence Logo">
+                        <div class="description">Confluence (2 / 6)</div>
+                    </div>
+    
+                    <div class="projectImage">
+                        <div class="imgCount">3 / 6</div>
+                        <img src="JIRA.svg" alt="JIRA Logo">
+                        <div class="description">JIRA (3 / 6)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="codeceptjs.png" alt="CodeceptJS Logo">
+                        <div class="description">CodeceptJS (4 / 6)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="playwright.svg" alt="Playwright Logo">
+                        <div class="description">Playwright (5 / 6)</div>
+                    </div>
+    
+                    <div class="projectImage">
+                        <img src="intellijointView.png" alt="Intellijoint VIEW">
+                        <div class="description">intellijoint VIEW (6 / 6)</div>
+                    </div>
+    
+                    <div class="dots-container">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+</Layout>
+

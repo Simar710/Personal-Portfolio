@@ -1,0 +1,237 @@
+---
+import Layout from "../components/Layout.astro"
+---
+
+<Layout>
+
+  <script>
+    function startSlideshow(slideId) {
+      let slideIndex = 0;
+      showSlides(slideId, slideIndex);
+    }
+
+    function showSlides(slideId, index) {
+      let slides = document.getElementById(slideId).getElementsByClassName("project-slide");
+      let dots = document.getElementById(slideId).getElementsByClassName("dot");
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      index++;
+      if (index > slides.length) {
+        index = 1;
+      }
+
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[index - 1].style.display = "block";
+      dots[index - 1].className += " active";
+
+      setTimeout(() => showSlides(slideId, index), 2000);
+    }
+
+    // Start each slideshow
+    startSlideshow("slideshow1");
+    startSlideshow("slideshow2");
+    startSlideshow("slideshow3");
+    startSlideshow("slideshow4");
+    startSlideshow("slideshow5");
+    startSlideshow("slideshow6");
+  </script>        
+    
+  <style>
+    @import './projects.css';
+  </style>
+  <section id = "projects" class="projects-section">
+    <div class="projects-content">
+      <h2>My Projects (Pending)</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-slideshow">
+            <div class="project-slides" id="slideshow1">
+              <div class="project-slide">
+                <img src="/public/GUI1.png" alt="Main Page" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GUI2.png" alt="Buy Page" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GUI3.png" alt="Sell Page" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GUI4.png" alt="Update Page" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GUI5.png" alt="Profit Page" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GUI6.png" alt="Search Page" />
+              </div>
+              <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div>
+          </div>
+          <h3>GUI Investment Manager</h3>
+          <p>GUI program to buy, sell, update, get total gain(profit) and search the investments.T</p>
+        </div>
+        <div class="project-card">
+          <div class="project-slideshow">
+            <div class="project-slides" id="slideshow2">
+              <div class="project-slide">
+                <img src="/public/covid1.png" alt="Project 2 Slide 1" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/covid2.png" alt="Project 2 Slide 1" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/covid3.png" alt="Project 2 Slide 1" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/covid4.png" alt="Project 2 Slide 2" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/covid5.png" alt="Project 2 Slide 2" />
+              </div>
+              <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div>
+          </div>
+          <h3>COVID-19 Statistical Data Analyzer</h3>
+          <p>AGiven COVID-19 data, the program will process, analyze, and plot, based on user input from a
+            graphical user interface</p>
+        </div>
+        <div class="project-card">
+          <div class="project-slideshow">
+            <div class="project-slides" id="slideshow3">
+              <div class="project-slide">
+                <img src="/public/GryphHub/GryphHub.drawio.svg" alt="GryphHub" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/class-diagram.svg" alt="Class Diagram" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/Entity_Diagram.drawio.svg" alt="Entity Diagram" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/InputOfficeHours.drawio.svg" alt="Input Office Hours Sequence Diagram" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/ViewCourses.drawio.svg" alt="View Course Sequence Diagram" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/DropCourse.drawio.svg" alt="Drop Course Sequence Diagram" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/ViewTimetable.drawio.svg" alt="View Timetable Sequence Diagram" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/IndicateConflict.drawio.svg" alt="Indiacte Conflict Sequence Diagram" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/RegisterCourse.drawio.svg" alt="Register Course Sequence Diagram" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/GryphHub/ViewClasslist.drawio.svg" alt="View Classlist Sequence Diagram" />
+              </div>
+              <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>                
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>                
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div>
+          </div>
+          <h3>GryphHub</h3>
+          <p>A prototype similar to university's website performing various function in java.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-slideshow">
+            <div class="project-slides" id="slideshow4">
+              <div class="project-slide">
+                <img src="/public/GryphHub/class-diagram.svg" alt="Project 4 Slide 1" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/docker-official.svg" alt="Project 4 Slide 2" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/docker-official.svg" alt="Project 2 Slide 2" />
+              </div>
+              <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div>
+          </div>
+          <h3>Personal Portfolio</h3>
+          <p>Personal Portfolio website developed using Astro Web framework.</p>
+        </div>
+        <div class="project-card">
+          <div class="project-slideshow">
+            <div class="project-slides" id="slideshow5">
+              <div class="project-slide">
+                <img src="/public/java-icon.svg" alt="Project 5 Slide 1" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/mysql.svg" alt="Project 5 Slide 2" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/docker-official.svg" alt="Project 2 Slide 2" />
+              </div>
+              <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div>
+          </div>
+          <h3>Tweet Manager</h3>
+          <p>Solely developed using data structures and algorithms</p>
+        </div>
+        <div class="project-card">
+          <div class="project-slideshow">
+            <div class="project-slides" id="slideshow6">
+              <div class="project-slide">
+                <img src="/public/softskills.svg" alt="Project 6 Slide 1" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/docker-official.svg" alt="Project 6 Slide 2" />
+              </div>
+              <div class="project-slide">
+                <img src="/public/docker-official.svg" alt="Project 2 Slide 2" />
+              </div>
+              <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div>
+          </div>
+          <h3>Project</h3>
+          <p>An interactive mobile app prototype designed with Figma.</p>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,58 @@
+---
+import EmailIcon from '../public/gmail-icon.svg';
+import PhoneIcon from '../public/phone-icon.svg';
+import LinkedInIcon from '../public/linkedin-icon.svg';
+import GithubIcon from '../public/github-icon.svg';
+import InstagramIcon from '../public/instagram-icon.svg';
+import Layout from "../components/Layout.astro"
+---
+
+<Layout>
+  
+<style>
+@import './contact.css';
+</style>
+
+<section id = "about" class="about-section">
+  <div class="about-content">
+    <div class="contact-info">
+      <div class="contact-icons">
+        <div class="icon-item">
+          <a href="https://www.linkedin.com/in/simardeep-singh-b7b908223/">
+            <img src={LinkedInIcon} alt="LinkedIn" />
+          </a>
+        </div>
+        <div class="icon-item">
+          <a href="https://github.com/Simar710">
+            <img src={GithubIcon} alt="GitHub" />
+          </a>
+        </div>
+        <div class="icon-item">
+          <a href="mailto:ssingh75@uoguelph.ca">
+            <img src={EmailIcon} alt="Email" />
+          </a>
+        </div>
+        <div class="icon-item">
+          <a href="tel:5199579611">
+            <img src={PhoneIcon} alt="Phone" />
+          </a>
+        </div>
+        <div class="icon-item">
+          <a href="https://www.instagram.com/__1s.imar1__/?next=%2F">
+            <img src={InstagramIcon} alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Get in Touch</h3>
+      <form action="mailto:[Your Email]" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+</Layout>

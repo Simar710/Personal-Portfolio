@@ -1,0 +1,405 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<Layout>
+    <style>
+        @import "./camis.css";
+    </style>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("projectImage");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 4 seconds
+        }
+    </script>
+    <section class="projectPage">
+        <img src="Norgen.jpeg" alt="Norgen Biotek" class="header-image" />
+        <div class="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Norgen Biotek, headquartered in Thorold, Ontario, Canada, is a
+                prominent leader in the biotechnology landscape. Renowned for
+                its pioneering efforts in molecular diagnostics and
+                therapeutics, the company excels in nucleic acid and protein
+                purification research. Norgen's unwavering commitment to
+                research and development has led to the formulation of a wide
+                range of products that are pivotal to both academic research and
+                the biopharmaceutical sector. <br />
+                As part of the bioinformatics department, I had the unique opportunity
+                to immerse myself in the dynamic intersection of technology and biology,
+                leveraging cutting-edge tools and methodologies to drive forward
+                projects of significant impact. My role was dynamic, challenging,
+                and immensely rewarding, offering me a firsthand experience of the
+                real-world applications of bioinformatics. Each day presented a unique
+                learning experience, further solidifying my passion for the intersection
+                of biology and technology. My time at Norgen Biotek was not just
+                a stepping stone in my academic journey but a significant milestone
+                in my budding professional career.
+            </p>
+        </div>
+        <h2 class="project">Goals and Job Description</h2>
+        <div class="projectList">
+            <div class="projectOne">
+                <div>
+                    <strong
+                        >There were some goals that I designed while working at
+                        Camis.</strong>
+                </div>
+                <div>They are listed below:</div>
+                <p>
+                    <strong>GOAL 1:</strong>
+                    <li>
+                        Gain a strong understanding of Docker and
+                        containerization techniques.
+                    </li>
+                    <li>
+                        Learn how to effectively containerize bioinformatics
+                        projects, ensuring reproducibility and scalability.
+                    </li>
+                    <br />
+                    <strong>Action Plan 1:</strong>
+                    <li>
+                        Familiarize with Docker by reading the official
+                        documentation and tutorials.
+                    </li>
+                    <li>
+                        Take online courses or tutorials specifically focused on
+                        Docker and containerization.
+                    </li>
+                    <li>
+                        Work closely with my manager and team members to
+                        understand the existing infrastructure and
+                        containerization requirements for the projects.
+                    </li>
+                    <li>
+                        Practice creating Dockerfiles and building containers
+                        for the project, ensuring proper configuration and
+                        dependencies.
+                    </li>
+                    <br />
+                    <strong>Measure of Success 1:</strong>
+                    <li>
+                        Successfully create Dockerfiles and build containers for
+                        bioinformatics projects.
+                    </li>
+                    <li>
+                        Demonstrate the ability to containerize projects with
+                        proper configuration and dependencies.
+                    </li>
+                    <li>
+                        Apply containerization techniques to ensure
+                        reproducibility and scalability.
+                    </li>
+                    <br />
+                    <strong>GOAL 2:</strong>
+                    <li>
+                        Develop skills in working with interdepartment projects
+                        with other teams.
+                    </li>
+                    <li>Enhance multitasking skills.</li>
+                    <li>
+                        Learn how to collaborate effectively, prioritize tasks,
+                        and meet project deadlines.
+                    </li>
+                    <br />
+                    <strong>Action Plan 2:</strong>
+                    <li>
+                        Communicate regularly with my manager and team members
+                        to understand project goals, priorities, and deadlines.
+                        Collaborate with other departments and work on different
+                        projects.
+                    </li>
+                    <li>
+                        Improve multitasking by working on side projects, main
+                        project, writing documentations, studying about various
+                        concepts related to bioinformatics.
+                    </li>
+                    <li>
+                        Break down the projects into smaller tasks and create a
+                        project timeline.
+                    </li>
+                    <br />
+                    <strong>Measure of Success 2:</strong>
+                    <li>
+                        Collaborate effectively with team members from different
+                        departments and complete tasks.
+                    </li>
+                    <li>Regularly communicate and meet project deadlines.</li>
+                    <li>
+                        Receive positive feedback on my collaboration and
+                        multitasking skills.
+                    </li>
+                    <li>
+                        Successfully prioritize tasks and meet project goals.
+                    </li>
+                    <br />
+                    <strong>GOAL 3:</strong>
+                    <br />
+                    <li>
+                        Enhance proficiency in Python scripting for
+                        bioinformatics tasks.
+                    </li>
+                    <br />
+                    <strong>Action Plan 3:</strong>
+                    <li>
+                        Study the documentation for libraries commonly used in
+                        bioinformatics, such as xlswriter, pandas, numpy etc..
+                    </li>
+                    <li>
+                        Collaborate with my manager to identify scripting needs
+                        and develop Python scripts to perform data analysis.
+                    </li>
+                    <br />
+                    <strong>Measure of Success 3:</strong>
+                    <li>
+                        Develop Python scripts to perform data analysis and meet
+                        the requirements identified by the manager.
+                    </li>
+                    <li>
+                        Apply commonly used bioinformatics libraries effectively
+                        in my scripts.
+                    </li>
+                    <li>
+                        Receive positive feedback on the quality and efficiency
+                        of my Python scripts.
+                    </li>
+                    <br />
+                    <strong>GOAL 4:</strong>
+                    <li>
+                        Develop my problem-solving skills by addressing
+                        challenges that arise during the containerization
+                        process or while writing Python scripts
+                    </li>
+                    <li>
+                        Learn how to identify issues, troubleshoot errors, and
+                        implement effective solutions.
+                    </li>
+                    <li>
+                        Use statistics or science knowledge to solve the issues.
+                    </li>
+                    <br />
+                    <strong>Action Plan 4:</strong>
+                    <li>
+                        When faced with challenges or errors, research the
+                        issue, consult documentation, and search relevant online
+                        forums or communities for solutions.
+                    </li>
+                    <li>
+                        Seek guidance from my manager or team members when
+                        necessary.
+                    </li>
+                    <li>
+                        Keep track of the problems I encounter and their
+                        solutions to build a knowledge base for future
+                        reference.
+                    </li>
+                    <li>
+                        Understand the problem from science or statistical point
+                        of view.
+                    </li>
+                    <br />
+                    <strong>Measure of Success 4:</strong>
+                    <li>
+                        Successfully identify and address challenges or errors
+                        encountered during the containerization process.
+                    </li>
+                    <li>
+                        Demonstrate the ability to troubleshoot issues and
+                        implement effective solutions.
+                    </li>
+                    <li>
+                        Receive positive feedback on your problem-solving
+                        approach from my manager and team members.
+                    </li>
+                    <li>
+                        Build a knowledge base of encountered problems and their
+                        solutions for future reference.
+                    </li>
+                    <li>
+                        Apply scientific or statistical knowledge to solve
+                        bioinformatics-related challenges.
+                    </li>
+                    <br />
+                    <strong>GOAL 5:</strong>
+                    <li>
+                        Improve my writing skills, especially documentation
+                        skills.
+                    </li>
+                    <br />
+                    <strong>Action Plan 5:</strong>
+                    <li>
+                        Write SOPs of my work and get feed back from my manager.
+                    </li>
+                    <li>
+                        Make daily and weekly report to document every task.
+                    </li>
+                    <br />
+                    <strong>Measure of Success 5:</strong>
+                    <li>
+                        Successfully write SOPs for my work tasks and receive
+                        feedback from my manager.
+                    </li>
+                    <li>
+                        Produce clear and concise daily and weekly reports
+                        documenting my tasks.
+                    </li>
+                    <li>
+                        Demonstrate improved writing skills through effective
+                        communication in documentation.
+                    </li>
+                    <li>
+                        Receive positive feedback on the quality and clarity of
+                        my written work.
+                    </li>
+                </p>
+            </div>
+            <div class="projectTwo">
+                <strong>
+                    <div>My Job Description</div>
+                </strong>
+                <div>Let's peek into what I did at my job:</div>
+                <p>
+                    <div>
+                        <li>
+                            Assisted in the development and implementation of
+                            computational pipelines for the analysis of
+                            high-throughput sequencing data (RNA-Seq, ChIP-Seq,
+                            etc.)
+                        </li>
+                        <li>
+                            Wrote different Dockerfiles and containerised three
+                            pipelines using docker ensuring reproducibility and
+                            scalability.
+                        </li>
+                        <li>
+                            Wrote, maintained and corrected different python, R
+                            and bash scripts.
+                        </li>
+                        <li>
+                            I modified the coding algorithms such that they
+                            become a lot faster. For example, some python
+                            scripts started running in 5-6 seconds, which were
+                            taking 10-15 minutes before.
+                        </li>
+                        <li>Troublehoot the devices several time.</li>
+                        <li>
+                            Worked with biologists and other team members to
+                            collect and curate data for analysis
+                        </li>
+                        <li>
+                            Performed quality control checks on raw data and
+                            analyzed results
+                        </li>
+                        <li>
+                            Assisted in the maintenance of databases and web
+                            interfaces for data visualization and analysis
+                        </li>
+                        <li>
+                            Kept up-to-date with the latest developments in
+                            bioinformatics tools and techniques, and evaluate
+                            and implement new tools as needed
+                        </li>
+                        <br />
+                        <strong>Challenges</strong>
+                        <li>
+                            Prior to this assignment, I lacked experience with
+                            Docker. Consequently, I undertook the initiative to
+                            familiarize myself with it and set an objective to
+                            dockerize two projects. Not only did I meet this
+                            target, but I exceeded expectations by dockerizing
+                            an additional project. Furthermore, I authored
+                            various Python, R, and Bash scripts, engaged in
+                            system troubleshooting, composed over six Standard
+                            Operating Procedures (SOPs), meticulously documented
+                            my work, and conducted extensive research on a
+                            myriad of tools and subjects pertinent to
+                            bioinformatics.
+                        </li>
+                        <li>
+                            In the position, it was imperative to familiarize
+                            oneself with specialized tools exclusive to the
+                            field of Bioinformatics, necessitating a
+                            comprehensive learning process. I successfully
+                            mastered these tools and pipelines, evidenced by my
+                            development of three efficient pipelines that not
+                            only functioned optimally but also exhibited
+                            enhanced speed and performance.
+                        </li>
+                    </div>
+                </p>
+                <div class="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>
+                        I am grateful for the opportunity to have been a part of
+                        a dynamic and expanding life sciences company. The
+                        collegial and inclusive work atmosphere, coupled with
+                        opportunities for professional growth and exposure to
+                        avant-garde technologies in bioinformatics, have
+                        significantly augmented my professional trajectory. This
+                        marked my inaugural on-site role, providing me the
+                        privilege to collaborate with distinguished
+                        professionals excelling in their respective domains. My
+                        tenure equipped me with proficiency in various tools and
+                        introduced me to an array of novel technologies. Most
+                        paramount, my role as a Bioinformatician Co-op instilled
+                        in me an invigorated passion for continuous learning and
+                        the adoption of diverse strategies to address
+                        challenges.
+                    </p>
+                </div>
+                <div class="projectImage">
+                    <img src="Norgen.jpeg" alt="Norgen Biotek" />
+                    <div class="description">Norgen Biotek (1 / 6)</div>
+                </div>
+                <div class="projectImage">
+                    <img src="Confluence.jpeg" alt="Confluence Logo" />
+                    <div class="description">Confluence (2 / 6)</div>
+                </div>
+
+                <div class="projectImage">
+                    <div class="imgCount">3 / 6</div>
+                    <img src="JIRA.svg" alt="JIRA Logo" />
+                    <div class="description">JIRA (3 / 6)</div>
+                </div>
+                <div class="projectImage">
+                    <img src="tableau.svg" alt="Tableau Logo" />
+                    <div class="description">Tableau (4 / 6)</div>
+                </div>
+                <div class="projectImage">
+                    <img src="SQLserver.png" alt="SQLServer Logo" />
+                    <div class="description">SQLserver (5 / 6)</div>
+                </div>
+
+                <div class="projectImage">
+                    <img src="testcafe.svg" alt="Testcafe Logo" />
+                    <div class="description">TestCafe (6 / 6)</div>
+                </div>
+
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

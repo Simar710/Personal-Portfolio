@@ -1,0 +1,20 @@
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: relative; /* or 'fixed' if you want the footer to stay at the bottom of the window */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
