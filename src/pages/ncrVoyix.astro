@@ -1,1 +1,186 @@
+---
+import Layout from "../components/Layout.astro"
+---
+
+<Layout>
+    <style>
+      @import './camis.css';
+    </style>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("projectImage");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 4 seconds
+        }
+    </script>
+        <section class="projectPage">
+            <img src="../Camis.JPG" alt="Camis Logo" class="header-image">
+            <div class="introduction">
+                <h2>Introduction</h2>
+                <p>
+                    For more than 40 years, Camis has offered government-run parks, marinas, and harbours reservation and park management systems.
+                    Camis reservation systems have developed over the course of four decades, moving from phone calls and paper lists to the powerful, feature-rich software solutions you see today. 
+                    There are different teams such as product squad, development squad, QA team, insight squad, etc. I was the part of insight squad. My team had 7 members. 
+                    During my co-op term, my manager got changed, but I was able to get adjusted to the sudden changes that were made by the new manager. My team was very supportive and helpful. 
+                    Everyone was determined to complete the task on time with utmost precision.
+                </p>
+            </div>
+            <h2 class="project">Goals and Job Description</h2>
+            <div class="projectList">
+                <div class="projectOne">
+                    <div><strong>There were some goals that I designed while working at Camis.</strong></div>
+                    <div>They are listed below:</div>
+                    <p>
+                        <strong>GOAL 1: </strong> To gain experience in teamwork at a professional level <br>
+                        <strong>Action Plan 1: </strong> Participate in every team meeting. <br>
+                        Communicate with team members. <br>
+                        Observing how the experienced members work <br>
+                        <strong>Measure of Success 1: </strong> Understood the working of the team. <br>
+                        I participate in every meeting, communicating with members and observing different tasks of team
+                        members. <br>
+                        <br>
+                        <strong>GOAL 2: </strong> To learn how the business is operated. Learn technical skills and tools to
+                        use in a professional environment. <br>
+                        <strong>Action Plan 2: </strong>Listen and observe the conversation about client meetings. <br>
+                        Tries to talk to members who are not on the team<br>
+                        Attend learning workshops and sessions about technical stuff <br>
+                        <strong>Measure of Success 2: </strong> Get to know how a company operates on a high level.
+                        Also, familiarised myself with internal working to meet the
+                        requirements of different clients. <br>
+                        <br>
+                        <strong>GOAL 3: </strong> Manage time for both learning and accomplishing the task. <br>
+                        <strong>Action Plan 3: </strong>I Make a timetable for each day in the morning. <br>
+                        Takes out time to learn about technical environment tools <br>
+                        <strong>Measure of Success 3: </strong> Successfully following the timetable, making changes as
+                        needed
+                        to it according to the task I have to complete. <br>
+                        <br>
+                        <strong>GOAL 4: </strong> Reading a lot of different documents to understand and adapt to
+                        the working of the new environment. <br>
+                        <strong>Action Plan 4: </strong>Try to understand what I read by practicing it. <br>
+                        Try to understand what I read by practicing it. <br>
+                        Take help from others. <br>
+                        <strong>Measure of Success 4: </strong> Read about different reports and documentation and played
+                        with
+                        camis software to understand what is happening. <br>
+                        Doubts were cleared by my co-workers and seniors through
+                        different meetings and communication platforms. <br>
+                        <br>
+                        <strong>GOAL 5: </strong> Learn to create and execute test plans. <br>
+                        <strong>Action Plan 5: </strong>Look at the different test plans that are already created by
+                        different team members. <br>
+                        Surf through the internet to understand them. <br>
+                        Take help from seniors and co-workers. <br>
+                        <strong>Measure of Success 5: </strong> Created test scenarios successfully. <br>
+                        Working on creating detailed test plans using JIRA<br>
+                        Executing Test plans. <br>
+                    </p>
+    
+                </div>
+                <div class="projectTwo">
+                    <strong>
+                        <div>My Job Description</div>
+                    </strong>
+                    <div>Let's peek into what I did at my job:</div>
+                    <p>
+    
+                    <div>Data management, business logic, and user interfaces are just a few of the areas that Developer
+                        Co-ops are expected to contribute to in the development of Camis software. I was a part of a major
+                        project from beginning to the end. I am proud that the project started with my work and also ended
+                        with my work. There was a lot of brainstroming and working with other team members was involved. The
+                        project was called 'Rental Dashboard'. This project's motive was to display information related to
+                        the rentals bought in the separate Dashboard. It had different requirements depending on the client
+                        it was made for. I created test scenarios, made test plans and executed them. Apart from this I
+                        worked with different 'Billing Reports'. It was very senistive work as billing reports are used to
+                        calculate the commission earned by Camis from its clients. So I had to test and create each and
+                        every scenario very carefully.<br>
+                        <br>
+                        <strong>Essential Functions:</strong>
+                        <br>
+                        <br>
+                        <strong>60% Operational Work</strong> <br>
+                        Program maintenance is the process of recreating, identifying, and resolving errors in any Camis
+                        software.
+                        Keeping up with unit tests as needed. Responding to bug reports and tickets,
+                        aiding in product design evaluations. To do my job, I made use of applications including JIRA,
+                        Tableau, Slack, Confluence, SQL Server, and TestCafe.<br>
+                        <strong>35% Product Road Map</strong> <br>
+                        Add additional unit tests as well as new features, enhancements, and corrections to Camis apps.
+                        The distribution of the tasks over the duration of my co-op term is seen in this percentage chart.
+                        <br>
+                        <strong>5% Active Participation</strong><br>
+                        Actively participating as part of the software development team, including team meetings, testing,
+                        park trips, and other duties as assigned by the project lead and/or reporting manager.
+                        <br>
+                        <br>
+                        <strong>Challenges</strong>
+                        Since the Developer Co-op will need to maintain expertise in a larger range of technologies than
+                        others, this position requires a great deal of adaptability.
+    
+    
+                    </div>
+                    </p>
+                    <div class="conclusion">
+                        <h2>Conclusion</h2>
+                        <p>
+                            It was a wonderful experience to work at Camis Inc. There's a lot that I gained while working. First of all, I never knew that there's so much going on behind reserving a campsite. 
+                            Before joining, I went through the job description, I found that there were a lot of opportunities to learn about testing and product review at Camis. I designed my goals keeping in 
+                            my mind not only technical aspects of the job, but also business and interpersonal skills. My main tasks were to perform tests on different features. Due to different learning sessions 
+                            and meetings, I was able to achieve each and every goal. Apart from the technical skills, I got to know how to interact with clients and team members at a professional level. 
+                            The experience that I gained at Camis will help me in honing my skills to the next level, which will eventually help me to fulfill my future goals.
+                        </p>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../Camis.JPG" alt="Camis Inc.">
+                        <div class="description">Camis Inc. (1 / 6)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../Confluence.jpeg" alt="Confluence Logo">
+                        <div class="description">Confluence (2 / 6)</div>
+                    </div>
+    
+                    <div class="projectImage">
+                        <div class="imgCount">3 / 6</div>
+                        <img src="../JIRA.svg" alt="JIRA Logo">
+                        <div class="description">JIRA (3 / 6)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../tableau.svg" alt="Tableau Logo">
+                        <div class="description">Tableau (4 / 6)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../SQLserver.png" alt="SQLServer Logo">
+                        <div class="description">SQLserver (5 / 6)</div>
+                    </div>
+    
+                    <div class="projectImage">
+                        <img src="../testcafe.svg" alt="Testcafe Logo">
+                        <div class="description">TestCafe (6 / 6)</div>
+                    </div>
+    
+                    <div class="dots-container">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+</Layout>
 
