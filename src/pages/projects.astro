@@ -1,266 +1,133 @@
 ---
-import Layout from "../components/Layout.astro"
+import Layout from "../components/Layout.astro";
+import ProjectCard from "../components/ProjectCard";
+import "../components/slideshow.js"; // Import the slideshow JavaScript
+
+const projectData = [
+  {
+    id: "slideshow1",
+    title: "ePortfolio",
+    description: "GUI program to buy, sell, update, get total gain(profit) and search the investments.",
+    slides: [
+      { src: "GUI1.png", alt: "Main Page" },
+      { src: "GUI2.png", alt: "Buy Page" },
+      { src: "GUI3.png", alt: "Sell Page" },
+      { src: "GUI4.png", alt: "Update Page" },
+      { src: "GUI5.png", alt: "Profit Page" },
+      { src: "GUI6.png", alt: "Search Page" },
+    ],
+    githubLink: "https://github.com/Simar710/ePortfolio"
+  },
+  {
+    id: "slideshow2",
+    title: "COVID-19 Statistical Data Analyzer",
+    description: "A program to process, analyze, and plot COVID-19 data.",
+    slides: [
+      { src: "covid1.png", alt: "Project 2 Slide 1" },
+      { src: "covid2.png", alt: "Project 2 Slide 2" },
+      { src: "covid3.png", alt: "Project 2 Slide 2" },
+      { src: "covid4.png", alt: "Project 2 Slide 2" },
+      { src: "covid5.png", alt: "Project 2 Slide 2" },
+    ],
+    githubLink: "https://github.com/Simar710/COVID-19-Statistical-Data-Analyzer"
+  },
+  {
+    id: "slideshow3",
+    title: "GryphHub",
+    description: "A prototype similar to university's website performing various function in java",
+    slides: [
+      { src: "GryphHub/GryphHub.drawio.svg", alt: "GryphHub" },
+      { src: "GryphHub/class-diagram.svg", alt: "Class Diagram" },
+      { src: "GryphHub/Entity_Diagram.drawio.svg", alt: "Entity Diagram" },
+      { src: "GryphHub/InputOfficeHours.drawio.svg", alt: "Input Office Hours Sequence  Diagram" },
+      { src: "GryphHub/ViewCourses.drawio.svg", alt: "View Course Sequence Diagram" },
+      { src: "GryphHub/DropCourse.drawio.svg", alt: "Drop Course Sequence Diagram" },
+      { src: "GryphHub/ViewTimetable.drawio.svg", alt: "View Timetable Sequence Diagram" },
+      { src: "GryphHub/IndicateConflict.drawio.svg", alt: "Indiacte Conflict Sequence Diagram" },
+      { src: "GryphHub/RegisterCourse.drawio.svg", alt: "Register Course Sequence Diagram" },
+      { src: "GryphHub/ViewClasslist.drawio.svg", alt: "View Classlist Sequence Diagram" },
+    ],
+    githubLink: "https://github.com/Simar710/GryphHub"
+  },
+  {
+    id: "slideshow4",
+    title: "SVG Parser",
+    description: "A program to process, analyze, and plot COVID-19 data.",
+    slides: [
+    { src: "svgParser/Emoji_poo.svg", alt: "Poo Emoji SVG" },
+    { src: "svgParser/hen_and_chicks.svg", alt: "Hen and chicks SVG" },
+    { src: "svgParser/rects.svg", alt: "rect SVG" },
+    { src: "svgParser/quad01.svg", alt: "quad SVG" },
+    ],
+    githubLink: "https://github.com/Simar710/SVG-Parser"
+  },
+  {
+    id: "slideshow5",
+    title: "Weapon Detection System",
+    description: "A robust weapon detection and classification system using advanced Machine Learning techniques.",
+    slides: [
+      { src: "weaponDetection/val_batch0_labels.jpg", alt: "Val Batch Label" },
+      { src: "weaponDetection/train_batch2.jpg", alt: "Training YOLO" },
+      { src: "weaponDetection/results.png", alt: "Result" },
+      { src: "weaponDetection/FFNN.png", alt: "FFNN" },
+      { src: "weaponDetection/confusion_matrix_normalized.png", alt: "Normalised confusion matrix" },
+      { src: "weaponDetection/confusion_matrix.png", alt: "Confusion Matrix" },
+      { src: "weaponDetection/F1_curve.png", alt: "F1 Curve" },
+      { src: "weaponDetection/labels_correlogram.jpg", alt: "Label Correlogram" },
+      { src: "weaponDetection/labels.jpg", alt: "Labels" },
+      { src: "weaponDetection/P_curve.png", alt: "P curve" },
+      { src: "weaponDetection/PR_curve.png", alt: "PR curve" },
+      { src: "weaponDetection/R_curve.png", alt: "R curve" },
+    ],
+    githubLink: "https://github.com/Simar710/Weapon-Detection-System"
+  },
+  {
+    id: "slideshow6",
+    title: "COVID-19 Statistical Data Analyzer",
+    description: "A program to process, analyze, and plot COVID-19 data.",
+    slides: [
+      { src: "covid1.png", alt: "Project 2 Slide 1" },
+      { src: "covid2.png", alt: "Project 2 Slide 2" },
+    ],
+    githubLink: "https://github.com/Simar710/EduGraph"
+  },
+];
 ---
 
 <Layout>
-
-  <script>
-    function startSlideshow(slideId) {
-      let slideIndex = 0;
-      showSlides(slideId, slideIndex);
-    }
-
-    function showSlides(slideId, index) {
-      let slides = document.getElementById(slideId).getElementsByClassName("project-slide");
-      let dots = document.getElementById(slideId).getElementsByClassName("dot");
-
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      index++;
-      if (index > slides.length) {
-        index = 1;
-      }
-
-      for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-
-      slides[index - 1].style.display = "block";
-      dots[index - 1].className += " active";
-
-      setTimeout(() => showSlides(slideId, index), 2000);
-    }
-
-    // Start each slideshow
-    startSlideshow("slideshow1");
-    startSlideshow("slideshow2");
-    startSlideshow("slideshow3");
-    startSlideshow("slideshow4");
-    startSlideshow("slideshow5");
-    startSlideshow("slideshow6");
-  </script>        
-    
-  <style>
-    @import './projects.css';
-  </style>
-  <section id = "projects" class="projects-section">
+  <section id="projects" class="projects-section">
     <div class="projects-content">
       <h2>My Projects</h2>
       <div class="project-grid">
-        <div class="project-card">
-          <div class="project-slideshow">
-            <div class="project-slides" id="slideshow1">
-              <div class="project-slide">
-                <img src="GUI1.png" alt="Main Page" />
-              </div>
-              <div class="project-slide">
-                <img src="GUI2.png" alt="Buy Page" />
-              </div>
-              <div class="project-slide">
-                <img src="GUI3.png" alt="Sell Page" />
-              </div>
-              <div class="project-slide">
-                <img src="GUI4.png" alt="Update Page" />
-              </div>
-              <div class="project-slide">
-                <img src="GUI5.png" alt="Profit Page" />
-              </div>
-              <div class="project-slide">
-                <img src="GUI6.png" alt="Search Page" />
-              </div>
-              <div class="dots-container">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            </div>
-          </div>
-          <h3>GUI Investment Manager</h3>
-          <p>GUI program to buy, sell, update, get total gain(profit) and search the investments.T</p>
-        </div>
-        <div class="project-card">
-          <div class="project-slideshow">
-            <div class="project-slides" id="slideshow2">
-              <div class="project-slide">
-                <img src="covid1.png" alt="Project 2 Slide 1" />
-              </div>
-              <div class="project-slide">
-                <img src="covid2.png" alt="Project 2 Slide 1" />
-              </div>
-              <div class="project-slide">
-                <img src="covid3.png" alt="Project 2 Slide 1" />
-              </div>
-              <div class="project-slide">
-                <img src="covid4.png" alt="Project 2 Slide 2" />
-              </div>
-              <div class="project-slide">
-                <img src="covid5.png" alt="Project 2 Slide 2" />
-              </div>
-              <div class="dots-container">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            </div>
-          </div>
-          <h3>COVID-19 Statistical Data Analyzer</h3>
-          <p>AGiven COVID-19 data, the program will process, analyze, and plot, based on user input from a
-            graphical user interface</p>
-        </div>
-        <div class="project-card">
-          <div class="project-slideshow">
-            <div class="project-slides" id="slideshow3">
-              <div class="project-slide">
-                <img src="GryphHub/GryphHub.drawio.svg" alt="GryphHub" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/class-diagram.svg" alt="Class Diagram" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/Entity_Diagram.drawio.svg" alt="Entity Diagram" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/InputOfficeHours.drawio.svg" alt="Input Office Hours Sequence Diagram" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/ViewCourses.drawio.svg" alt="View Course Sequence Diagram" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/DropCourse.drawio.svg" alt="Drop Course Sequence Diagram" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/ViewTimetable.drawio.svg" alt="View Timetable Sequence Diagram" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/IndicateConflict.drawio.svg" alt="Indiacte Conflict Sequence Diagram" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/RegisterCourse.drawio.svg" alt="Register Course Sequence Diagram" />
-              </div>
-              <div class="project-slide">
-                <img src="GryphHub/ViewClasslist.drawio.svg" alt="View Classlist Sequence Diagram" />
-              </div>
-              <div class="dots-container">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>                
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>                
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            </div>
-          </div>
-          <h3>GryphHub</h3>
-          <p>A prototype similar to university's website performing various function in java.</p>
-        </div>
-        <div class="project-card">
-          <div class="project-slideshow">
-            <div class="project-slides" id="slideshow4">
-              <div class="project-slide">
-                <img src="home.png" alt="Home Page" />
-              </div>
-              <div class="project-slide">
-                <img src="work.png" alt="Work Experience" />
-              </div>
-              <div class="project-slide">
-                <img src="skills.png" alt="Skills page" />
-              </div>
-              <div class="project-slide">
-                <img src="projects.png" alt="Projects page" />
-              </div>
-              <div class="project-slide">
-                <img src="about.png" alt="Contact Page" />
-              </div>
-              <div class="dots-container">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            </div>
-          </div>
-          <h3>Personal Portfolio</h3>
-          <p>Personal Portfolio website developed using Astro Web framework.</p>
-        </div>
-
-        <div class="project-card">
-          <div class="project-slideshow">
-            <div class="project-slides" id="slideshow5">
-              <div class="project-slide">
-                <img src="svgParser/Emoji_poo.svg" alt="Poo Emoji SVG" />
-              </div>
-              <div class="project-slide">
-                <img src="svgParser/hen_and_chicks.svg" alt="Hen and chicks SVG" />
-              </div>
-              <div class="project-slide">
-                <img src="svgParser/rects.svg" alt="rect SVG" />
-              </div>
-              <div class="project-slide">
-                <img src="svgParser/quad01.svg" alt="quad SVG" />
-              </div>
-              <div class="dots-container">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            </div>
-          </div>
-          <h3>SVG Parser</h3>
-          <p>A web application used for viewing, editing and creating SVG images. </p>
-        </div>
-        <div class="project-card">
-          <div class="project-slideshow">
-            <div class="project-slides" id="slideshow6">
-              <div class="project-slide">
-                <img src="weaponDetection/gun.jpg" alt="Poo Emoji SVG" />
-              </div>
-              <div class="dots-container">
-                <span class="dot"></span>
-            </div>
-            </div>
-          </div>
-          <h3>Weapon Detection System</h3>
-          <p>Developed a robust weapon detection and classification system using advanced Machine Learning techniques.</p>
-        </div>
-<!-- 
-<div class="project-card">
-  <div class="project-slideshow">
-    <div class="project-slides" id="slideshow5">
-      <div class="project-slide">
-        <img src="java-icon.svg" alt="Project 5 Slide 1" />
-      </div>
-      <div class="project-slide">
-        <img src="mysql.svg" alt="Project 5 Slide 2" />
-      </div>
-      <div class="project-slide">
-        <img src="docker-official.svg" alt="Project 2 Slide 2" />
-      </div>
-      <div class="dots-container">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-    </div>
-  </div>
-  <h3>Tweet Manager</h3>
-  <p>Solely developed using data structures and algorithms</p>
-</div> -->
-
-        <!-- Add more project cards as needed -->
+        {projectData.map(project => (
+          <ProjectCard
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            slides={project.slides}
+            githubLink={project.githubLink}
+          />
+        ))}
       </div>
     </div>
   </section>
+
+  <!-- Run slideshow initialization after all components are rendered -->
+  <script>
+    import { startSlideshow } from "../components/slideshow.js";
+    document.addEventListener("DOMContentLoaded", () => {
+      const projectData = [
+        { id: "slideshow1" },
+        { id: "slideshow2" },
+        { id: "slideshow3" },
+        { id: "slideshow4" },
+        { id: "slideshow5" },
+        { id: "slideshow6" },
+        // Add all slideshows
+      ];
+  
+      projectData.forEach(project => startSlideshow(project.id));
+    });
+  </script>
+  
 </Layout>

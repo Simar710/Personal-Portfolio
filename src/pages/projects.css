@@ -1,4 +1,4 @@
-/* projects.css */
+/* General styling */
 .projects-section {
   min-height: 100vh;
   display: flex;
@@ -19,7 +19,6 @@
   color: #333;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
 }
 
 .project-grid {
@@ -29,6 +28,7 @@
   justify-items: center;
 }
 
+/* Card styling */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -39,56 +39,21 @@
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   margin-bottom: 1.5rem;
-  height:500px;
+  height: 500px;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
 }
-  
-.dots-container {
-  text-align: center;
-  padding: 20px 10px;
-}
 
-.dot {
-  height: 8px;
-  width: 8px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 3px;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #000000;
-}
-
-
-.project-card img {
-  transform: scale(1.05);
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 8px;
-  width: 100%;
-  object-fit: contain;
-}
-
-.project-card h3 {
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.project-card p {
-  color: #777;
-  margin-bottom: 1rem;
-}
-
+/* Slideshow container */
 .project-slideshow {
   width: 100%;
-  height: 90%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .project-slides {
@@ -96,41 +61,84 @@
   transition: transform 0.3s ease;
 }
 
+/* Individual slide styling */
 .project-slide {
   flex: 0 0 100%;
-  height: 100%;
-  transition: opacity 0.3s ease;
+  height: auto;
+  width: 100%;
+  display: none; /* Hidden by default */
+  transition: opacity 0.5s ease;
 }
-/* ... other styles ... */
 
-.project-card.zoomed {
-  position: fixed;
-  top: 3rem;
-  left: 3rem;
-  right: 3rem;
-  bottom: 3rem;
-  z-index: 1000;
-  background-color: white;
+.project-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  max-height: 280px;
+  padding: 0.5rem;
+}
+
+/* Dots container styling */
+.dots-container {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #333;
+}
+
+/* Text styling */
+.project-card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.project-card p {
+  color: #777;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Github icon styling */
+.project-card a {
+  color: #333;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #000;
+}
+
+/* GitHub icon styling */
+.project-card a {
+  color: #333;
+  margin-top: 0.5rem;
+  font-size: 1.5rem; /* Adjust icon size */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: auto;
-  backdrop-filter: blur(5px);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.project-card.zoomed .project-slideshow {
-  height: 100%;
-  width: 100%;
-}
-
-.project-card.zoomed .project-slide {
-  flex: 0 0 100%;
-  height: 100%;
-  transition: opacity 0.3s ease;
-}
-
-.project-card.zoomed h3,
-.project-card.zoomed p {
-  display: none;
+.project-card a:hover {
+  color: #000;
 }
