@@ -6,30 +6,39 @@ import "../components/slideshow.js"; // Import the slideshow JavaScript
 const projectData = [
   {
     id: "slideshow1",
-    title: "ePortfolio",
-    description: "GUI program to buy, sell, update, get total gain(profit) and search the investments.",
+    title: "EduGraph",
+    description: "Full-stack web app: Parsed the data into csv files using python. Developed a Python-based CLI and Excel UI for course data management, integrated with a MySQL database and PHP REST API, featuring web applications for course recommendations, prerequisite graphs using vis.js, CI/CD pipeline on GitHub Action & GitLab CICD, deployed using Nginx on AWS.",
     slides: [
-      { src: "GUI1.png", alt: "Main Page" },
-      { src: "GUI2.png", alt: "Buy Page" },
-      { src: "GUI3.png", alt: "Sell Page" },
-      { src: "GUI4.png", alt: "Update Page" },
-      { src: "GUI5.png", alt: "Profit Page" },
-      { src: "GUI6.png", alt: "Search Page" },
+      { src: "EduGraph/home.png", alt: "Main Page" },
+      { src: "EduGraph/tree.png", alt: "Course Tree" },
+      { src: "EduGraph/courseGenerator.png", alt: "Course Generator Page" },
+      { src: "EduGraph/courseTree.png", alt: "Course Tree Page" },
+      { src: "EduGraph/APIDoc.png", alt: "API Documentation" },
+      { src: "EduGraph/ics.png", alt: "Functionalities" },
+      { src: "EduGraph/myPage.png", alt: "My Page" },
+      { src: "EduGraph/Database.png", alt: "Database" },
     ],
-    githubLink: "https://github.com/Simar710/ePortfolio"
+    githubLink: "https://github.com/Simar710/EduGraph"
   },
   {
     id: "slideshow2",
-    title: "COVID-19 Statistical Data Analyzer",
-    description: "A program to process, analyze, and plot COVID-19 data.",
+    title: "Weapon Detection System",
+    description: "A robust weapon detection and classification system using advanced Machine Learning techniques.",
     slides: [
-      { src: "covid1.png", alt: "Project 2 Slide 1" },
-      { src: "covid2.png", alt: "Project 2 Slide 2" },
-      { src: "covid3.png", alt: "Project 2 Slide 2" },
-      { src: "covid4.png", alt: "Project 2 Slide 2" },
-      { src: "covid5.png", alt: "Project 2 Slide 2" },
+      { src: "weaponDetection/val_batch0_labels.jpg", alt: "Val Batch Label" },
+      { src: "weaponDetection/train_batch2.jpg", alt: "Training YOLO" },
+      { src: "weaponDetection/results.png", alt: "Result" },
+      { src: "weaponDetection/FFNN.png", alt: "FFNN" },
+      { src: "weaponDetection/confusion_matrix_normalized.png", alt: "Normalised confusion matrix" },
+      { src: "weaponDetection/confusion_matrix.png", alt: "Confusion Matrix" },
+      { src: "weaponDetection/F1_curve.png", alt: "F1 Curve" },
+      { src: "weaponDetection/labels_correlogram.jpg", alt: "Label Correlogram" },
+      { src: "weaponDetection/labels.jpg", alt: "Labels" },
+      { src: "weaponDetection/P_curve.png", alt: "P curve" },
+      { src: "weaponDetection/PR_curve.png", alt: "PR curve" },
+      { src: "weaponDetection/R_curve.png", alt: "R curve" },
     ],
-    githubLink: "https://github.com/Simar710/COVID-19-Statistical-Data-Analyzer"
+    githubLink: "https://github.com/Simar710/Weapon-Detection-System"
   },
   {
     id: "slideshow3",
@@ -51,6 +60,20 @@ const projectData = [
   },
   {
     id: "slideshow4",
+    title: "ePortfolio",
+    description: "GUI program to buy, sell, update, get total gain(profit) and search the investments.",
+    slides: [
+      { src: "GUI1.png", alt: "Main Page" },
+      { src: "GUI2.png", alt: "Buy Page" },
+      { src: "GUI3.png", alt: "Sell Page" },
+      { src: "GUI4.png", alt: "Update Page" },
+      { src: "GUI5.png", alt: "Profit Page" },
+      { src: "GUI6.png", alt: "Search Page" },
+    ],
+    githubLink: "https://github.com/Simar710/ePortfolio"
+  },
+  {
+    id: "slideshow5",
     title: "SVG Parser",
     description: "A program to process, analyze, and plot COVID-19 data.",
     slides: [
@@ -62,34 +85,18 @@ const projectData = [
     githubLink: "https://github.com/Simar710/SVG-Parser"
   },
   {
-    id: "slideshow5",
-    title: "Weapon Detection System",
-    description: "A robust weapon detection and classification system using advanced Machine Learning techniques.",
-    slides: [
-      { src: "weaponDetection/val_batch0_labels.jpg", alt: "Val Batch Label" },
-      { src: "weaponDetection/train_batch2.jpg", alt: "Training YOLO" },
-      { src: "weaponDetection/results.png", alt: "Result" },
-      { src: "weaponDetection/FFNN.png", alt: "FFNN" },
-      { src: "weaponDetection/confusion_matrix_normalized.png", alt: "Normalised confusion matrix" },
-      { src: "weaponDetection/confusion_matrix.png", alt: "Confusion Matrix" },
-      { src: "weaponDetection/F1_curve.png", alt: "F1 Curve" },
-      { src: "weaponDetection/labels_correlogram.jpg", alt: "Label Correlogram" },
-      { src: "weaponDetection/labels.jpg", alt: "Labels" },
-      { src: "weaponDetection/P_curve.png", alt: "P curve" },
-      { src: "weaponDetection/PR_curve.png", alt: "PR curve" },
-      { src: "weaponDetection/R_curve.png", alt: "R curve" },
-    ],
-    githubLink: "https://github.com/Simar710/Weapon-Detection-System"
-  },
-  {
     id: "slideshow6",
     title: "COVID-19 Statistical Data Analyzer",
     description: "A program to process, analyze, and plot COVID-19 data.",
     slides: [
-      { src: "covid1.png", alt: "Project 2 Slide 1" },
-      { src: "covid2.png", alt: "Project 2 Slide 2" },
+      { src: "covid1.png", alt: "Plot 1" },
+      { src: "covid2.png", alt: "Plot 2" },
+      { src: "covid3.png", alt: "Plot 3" },
+      { src: "covid4.png", alt: "Plot 4" },
+      { src: "covid5.png", alt: "Plot 5" },
+      { src: "covidgraph.png", alt: "Plot 6" },
     ],
-    githubLink: "https://github.com/Simar710/EduGraph"
+    githubLink: "https://github.com/Simar710/COVID-19-Statistical-Data-Analyzer"
   },
 ];
 ---
