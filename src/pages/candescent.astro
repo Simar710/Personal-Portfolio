@@ -1,0 +1,141 @@
+---
+import Layout from "../components/Layout.astro"
+---
+
+<Layout>
+    <style>
+      @import './camis.css';
+    </style>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("projectImage");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 4 seconds
+        }
+    </script>
+        <section class="projectPage">
+            <img src="../ncrvoyix.png" alt="ncr voyix Logo" class="header-image">
+            <div class="introduction">
+                <h2>Introduction</h2>
+                <p>
+                    Candescent brings together the transformative technologies that power and connect account opening, digital banking and branch solutions for banks and credit unions of all sizes on any core.
+                    It offers an extensive portfolio of industry-leading products and services with an extensible ecosystem of integrated solutions. 
+                    Its API-first architecture and developer tools enable financial institutions to optimize and expand upon their existing capabilities by seamlessly connecting custom-built or third-party solutions. 
+                    And its connected in-person, remote and digital experiences reinvent customer service across all channels.
+                    I got the return offer from Candecent (previosuly, NCR Voyix) for this co-op.
+                    There was a lot of pair programming involved. I used to work with senior developers and used to pair program together.
+                </p>
+            </div>
+            <h2 class="project">Goals and Job Description</h2>
+            <div class="projectList">
+                <div class="projectTwo">
+                    <strong>
+                        <div>My Job Description</div>
+                    </strong>
+                    <div>Let's peek into what I did at my job:</div>
+                    <p>
+                        <div>
+                            <li>
+                                Developed a core adapter using Java Spring Boot and API Toolkit to integrate the application core with external (or clients’) APIs.
+                            </li>
+                            <li>
+                                Containerized & deployed microservices using Docker & Kubernetes on Google Cloud Platform to ensure scalability & reliability.
+                            </li>
+                            <li>
+                                Collaborated on implementing CI/CD pipelines for automated builds, testing, & deployments, enhancing development efficiency.
+                            </li>
+                            <li>
+                                Established a CI/CD pipeline in Jenkins to build & test the repositories.
+                            </li>
+                            <li>
+                                Collaborate with cross-functional teams, both onshore and offshore, to deliver feature in the most efficient manner. 
+                            </li>
+                            <li>
+                                Participate in Agile ceremonies such as sprint planning, stand-ups, and retrospectives to drive continuous improvement and delivery efficiency.
+                            </li>
+                            <li>
+                                Debugged complex issues, reducing bugs by 15% through code reviews & executing BDD test cases using Gherkin, Junit & TestCafe.
+                            </li>
+                            <li>
+                                Developed SOAP and RESTful APIs using Java Spring Boot, YML and in-House Tools.
+                            </li>
+                            <li>
+                                Collaborate with cross-functional teams, both onshore and offshore, to deliver feature in the most efficient manner.
+                            </li>
+                            <br />
+                            
+                        </div>
+                    </p>
+                    <div class="conclusion">
+                        <h2>Conclusion</h2>
+                        <p>
+                            It was a wonderful experience to work at Candescent. There's a lot that I gained while working. I got the chance to work with senior developers and learn from their experience. 
+                        </p>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../candescent.jpeg" alt=" Inc.">
+                        <div class="description">Candescent (1 / 9)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../springio-icon.svg" alt="Java Spring Boot Logo">
+                        <div class="description">Java Spring Boot(2 / 9)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../kubernetes-icon.svg" alt="Kubernetes Logo">
+                        <div class="description">Kubernetes (3 / 9)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../java-icon.svg" alt="Java Logo">
+                        <div class="description">Java (4 / 9)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../google_cloud-icon.svg" alt="Google Cloud Platform (GCP) Logo">
+                        <div class="description">Google Cloud Platform (GCP) (5 / 9)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../helmsh-icon.svg" alt="Helm Logo">
+                        <div class="description">Helm (6 / 9)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../docker-official.svg" alt="Docker Logo">
+                        <div class="description">Docker (7 / 9)</div>
+                    </div>
+                    <div class="projectImage">
+                        <img src="../Confluence.jpeg" alt="Confluence Logo">
+                        <div class="description">Confluence (8 / 9)</div>
+                    </div>
+                    <div class="projectImage">
+                        <div class="imgCount">3 / 6</div>
+                        <img src="../JIRA.svg" alt="JIRA Logo">
+                        <div class="description">JIRA (9 / 9)</div>
+                    </div>
+    
+                    <div class="dots-container">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+</Layout>
+
