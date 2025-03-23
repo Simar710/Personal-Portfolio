@@ -68,7 +68,8 @@
   flex: 0 0 100%;
   height: auto;
   width: 100%;
-  display: none; /* Hidden by default */
+  display: none;
+  /* Hidden by default */
   transition: opacity 0.5s ease;
 }
 
@@ -125,21 +126,53 @@
 .project-card a {
   color: #333;
   margin-top: 1rem;
-  font-size: 1.5rem; /* Adjust icon size */
+  font-size: 1.5rem;
+  /* Adjust icon size */
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  width: 30px; 
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #f7f7f7;
-  transition: background-color 0.3s ease, transform 0.3s ease; 
-  
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
 }
 
 .project-card a:hover {
-  background-color: #746a68; /* Match your primary color */
-  transform: scale(1.1); /
+  background-color: #746a68;
+  /* Match your primary color */
+  transform: scale(1.1);/
+}
+
+.stylish-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e44d26;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.stylish-btn:hover {
+  background-color: #b13d20;
+  transform: scale(1.05);
+}
+
+.stylish-btn:active {
+  background-color: #742815;
+  transform: scale(0.95);
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
 }

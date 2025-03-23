@@ -14,19 +14,22 @@ import Layout from "../components/Layout.astro"
             let slides = document.getElementsByClassName("projectImage");
             let dots = document.getElementsByClassName("dot");
             for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                (slides[i] as HTMLElement).style.display = "none";
             }
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}
             for (let i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex-1].style.display = "block";
+            (slides[slideIndex-1] as HTMLElement).style.display = "block";
             dots[slideIndex-1].className += " active";
             setTimeout(showSlides, 2000); // Change slide every 4 seconds
         }
     </script>
         <section class="projectPage">
+            <div class="back-button">
+                <button onclick="history.back()" class="btn stylish-btn">Back</button>
+            </div>
             <img src="../ncrvoyix.png" alt="ncr voyix Logo" class="header-image">
             <div class="introduction">
                 <h2>Introduction</h2>
@@ -143,6 +146,10 @@ import Layout from "../components/Layout.astro"
                             Before joining, I went through the job description, I found that there were a lot of opportunities to learn about the development of softwares. The most attracting aspect was that the position offers the opportunity to work with a wide range of tools.
                             My tasks include a range of items from developemnt to testing, whether its backend or frontend. Due to helpful nature of my seniors
                             , I was able to achieve each and every goal. I think this co-op term gave me the most experience in technical aspects of development, which will help me achieve my future goals.
+                        </p>
+                        <p>
+                            You can view my work term evaluation report provided by my team lead at NCR Voyix here:
+                            <a href="/Personal-Portfolio/pages/Documents/Simardeep_Singh_Coop_Evaluation_Report.pdf" target="_blank" class="stylish-btn">View Evaluation Report</a>
                         </p>
                     </div>
                     <div class="projectImage">

@@ -42,21 +42,16 @@ const projectData = [
   },
   {
     id: "slideshow3",
-    title: "GryphHub",
-    description: "A prototype similar to university's website performing various function in java",
+    title: "MediTrack",
+    description: "a full-stack medication reminder and prescription management app with Next.js, Flutter, Node.js, and PostgreSQL.",
     slides: [
-      { src: "GryphHub/GryphHub.drawio.svg", alt: "GryphHub" },
-      { src: "GryphHub/class-diagram.svg", alt: "Class Diagram" },
-      { src: "GryphHub/Entity_Diagram.drawio.svg", alt: "Entity Diagram" },
-      { src: "GryphHub/InputOfficeHours.drawio.svg", alt: "Input Office Hours Sequence  Diagram" },
-      { src: "GryphHub/ViewCourses.drawio.svg", alt: "View Course Sequence Diagram" },
-      { src: "GryphHub/DropCourse.drawio.svg", alt: "Drop Course Sequence Diagram" },
-      { src: "GryphHub/ViewTimetable.drawio.svg", alt: "View Timetable Sequence Diagram" },
-      { src: "GryphHub/IndicateConflict.drawio.svg", alt: "Indiacte Conflict Sequence Diagram" },
-      { src: "GryphHub/RegisterCourse.drawio.svg", alt: "Register Course Sequence Diagram" },
-      { src: "GryphHub/ViewClasslist.drawio.svg", alt: "View Classlist Sequence Diagram" },
+      { src: "MediTrack/Home.png", alt: "Home" },
+      { src: "MediTrack/Signup.png", alt: "SignUp" },
+      { src: "MediTrack/Login.png", alt: "Login" },
+      { src: "MediTrack/PatientDashboard.png", alt: "Patient Dashboard" },
+      { src: "MediTrack/PharmacistDashboard.png", alt: "Pharmacist Dashboard" },
     ],
-    githubLink: "https://github.com/Simar710/GryphHub"
+    githubLink: "https://github.com/Simar710/MediTrack"
   },
   {
     id: "slideshow4",
@@ -75,7 +70,7 @@ const projectData = [
   {
     id: "slideshow5",
     title: "SVG Parser",
-    description: "A program to process, analyze, and plot COVID-19 data.",
+    description: "An application allows users to create, edit, and manipulate SVG files with ease, provides a versatile interface for working with scalable vector graphics, enabling precise and intuitive design modification",
     slides: [
     { src: "svgParser/Emoji_poo.svg", alt: "Poo Emoji SVG" },
     { src: "svgParser/hen_and_chicks.svg", alt: "Hen and chicks SVG" },
@@ -86,17 +81,21 @@ const projectData = [
   },
   {
     id: "slideshow6",
-    title: "COVID-19 Statistical Data Analyzer",
-    description: "A program to process, analyze, and plot COVID-19 data.",
+    title: "GryphHub",
+    description: "A University Website prototype performing various function in java",
     slides: [
-      { src: "covid1.png", alt: "Plot 1" },
-      { src: "covid2.png", alt: "Plot 2" },
-      { src: "covid3.png", alt: "Plot 3" },
-      { src: "covid4.png", alt: "Plot 4" },
-      { src: "covid5.png", alt: "Plot 5" },
-      { src: "covidgraph.png", alt: "Plot 6" },
+      { src: "GryphHub/GryphHub.drawio.svg", alt: "GryphHub" },
+      { src: "GryphHub/class-diagram.svg", alt: "Class Diagram" },
+      { src: "GryphHub/Entity_Diagram.drawio.svg", alt: "Entity Diagram" },
+      { src: "GryphHub/InputOfficeHours.drawio.svg", alt: "Input Office Hours Sequence  Diagram" },
+      { src: "GryphHub/ViewCourses.drawio.svg", alt: "View Course Sequence Diagram" },
+      { src: "GryphHub/DropCourse.drawio.svg", alt: "Drop Course Sequence Diagram" },
+      { src: "GryphHub/ViewTimetable.drawio.svg", alt: "View Timetable Sequence Diagram" },
+      { src: "GryphHub/IndicateConflict.drawio.svg", alt: "Indiacte Conflict Sequence Diagram" },
+      { src: "GryphHub/RegisterCourse.drawio.svg", alt: "Register Course Sequence Diagram" },
+      { src: "GryphHub/ViewClasslist.drawio.svg", alt: "View Classlist Sequence Diagram" },
     ],
-    githubLink: "https://github.com/Simar710/COVID-19-Statistical-Data-Analyzer"
+    githubLink: "https://github.com/Simar710/GryphHub"
   },
 ];
 ---
@@ -116,6 +115,9 @@ const projectData = [
           />
         ))}
       </div>
+      <div class="more-projects-button">
+        <a href="/Personal-Portfolio/more-projects" class="btn stylish-btn">More Projects</a>
+      </div>
     </div>
   </section>
 
@@ -130,7 +132,6 @@ const projectData = [
         { id: "slideshow4" },
         { id: "slideshow5" },
         { id: "slideshow6" },
-        // Add all slideshows
       ];
   
       projectData.forEach(project => startSlideshow(project.id));

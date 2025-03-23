@@ -1,0 +1,118 @@
+---
+import Layout from "../components/Layout.astro";
+import ProjectCard from "../components/ProjectCard";
+import "../components/slideshow.js"; // Import the slideshow JavaScript
+
+const moreProjects = [
+  {
+    id: "slideshow7",
+    title: "COVID-19 Statistical Data Analyzer",
+    description: "Developed a program to process, analyze, and plot COVID-19 data using Python. Implemented data visualization with Matplotlib and Pandas, and created statistical models to analyze trends.",
+    slides: [
+      { src: "covid1.png", alt: "Plot 1" },
+      { src: "covid2.png", alt: "Plot 2" },
+      { src: "covid3.png", alt: "Plot 3" },
+      { src: "covid4.png", alt: "Plot 4" },
+      { src: "covid5.png", alt: "Plot 5" },
+      { src: "covidgraph.png", alt: "Plot 6" },
+    ],
+    githubLink: "https://github.com/Simar710/COVID-19-Statistical-Data-Analyzer"
+  },
+  {
+    id: "slideshow8",
+    title: "ViralSense",
+    description: "AI-powered epidemic risk analysis system using graph-based modeling, GPU-accelerated analytics, and real-time visualization.",
+    slides: [
+      { src: "ViralSense/Graph.png", alt: "SYNTHEA" },
+      { src: "ViralSense/Collections.png", alt: "Collections in dataset" },
+    ],
+    githubLink: "https://github.com/Simar710/ViralSense"
+  },
+  {
+    id: "slideshow9",
+    title: "MeetingLens",
+    description: "AI-Powered Meeting Assistant leveraging Azure Cognitive Services and Azure OpenAI for real-time transcription and meeting summarization.",
+    slides: [
+      { src: "MeetingLens/cognative-services.svg", alt: "Azure Congative Services" },
+      { src: "MeetingLens/functions.svg", alt: "Azure Function App" },
+    ],
+    githubLink: "https://github.com/Simar710/MeetingLens"
+  },
+  {
+    id: "slideshow10",
+    title: "DataDiscoveryHub",
+    description: "A full-stack Django web app for intuitive data exploration with REST APIs and PostgreSQL, containerized with Docker, deployed using Gunicorn, and integrated CI/CD pipelines with Sentry for real-time error tracking.",
+    slides: [
+      { src: "DataDiscoveryHub/Login.png", alt: "Login" },
+      { src: "DataDiscoveryHub/Users.png", alt: "Users" },
+      { src: "DataDiscoveryHub/AddEndpoint.png", alt: "Add Endpoint" },
+      { src: "DataDiscoveryHub/AdminEndpoint.png", alt: "Admin Endpoint" },
+      { src: "DataDiscoveryHub/DatasetEndpoint.png", alt: "Dataset Endpoint" },
+      { src: "DataDiscoveryHub/CICD.png", alt: "CICD" },
+      { src: "DataDiscoveryHub/Sentry.png", alt: "Sentry" },
+      { src: "DataDiscoveryHub/DockerWebDB.png", alt: "Docker container web and DB" },
+    ],
+    githubLink: "https://github.com/Simar710/DataDiscoveryHub"
+  },
+  {
+    id: "slideshow11",
+    title: "AppStoreAnalyticsQA",
+    description: "SwiftUI based iOS app simulating an App Store Analytics dashboard that fetches and displays analytic metrics",
+    slides: [
+      { src: "AppStoreAnalyticsQA/CICD.png", alt: "CI/CD" },
+    ],
+    githubLink: "https://github.com/Simar710/AppStoreAnalyticsQA"
+  },
+  {
+    id: "slideshow12",
+    title: "Personal Portfolio",
+    description: "Designed and developed a personal portfolio website using Astro.js and React. Showcases projects, skills, and experience with an interactive and responsive design.",
+    slides: [
+      { src: "Portfolio/Home.png", alt: "Portfolio Home" },
+      { src: "Portfolio/Work.png", alt: "Portfolio Work" },
+      { src: "Portfolio/Projects.png", alt: "Projects Section" },
+      { src: "Portfolio/Skills.png", alt: "Skills Section" },
+      { src: "Portfolio/Contact.png", alt: "Contact Section" },
+    ],
+    githubLink: "https://github.com/Simar710/Personal-Portfolio"
+  },
+];
+---
+
+<Layout>
+  <section id="more-projects" class="projects-section">
+    <div class="back-button">
+      <button onclick="history.back()" class="btn stylish-btn">Go Back</button>
+    </div>
+    <div class="projects-content">
+      <h2>More Projects</h2>
+      <div class="project-grid">
+        {moreProjects.map(project => (
+          <ProjectCard
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            slides={project.slides}
+            githubLink={project.githubLink}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import { startSlideshow } from "../components/slideshow.js";
+    document.addEventListener("DOMContentLoaded", () => {
+      const moreProjects = [
+        { id: "slideshow7" },
+        { id: "slideshow8" },
+        { id: "slideshow9" },
+        { id: "slideshow10" },
+        { id: "slideshow11" },
+        { id: "slideshow12" },
+      ];
+  
+      moreProjects.forEach(project => startSlideshow(project.id));
+    });
+  </script>
+</Layout>
