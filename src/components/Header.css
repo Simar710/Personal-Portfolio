@@ -12,6 +12,9 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #fff;
+  text-transform:uppercase;
+  letter-spacing: 2px;
 }
 
 .nav-list {
@@ -29,11 +32,12 @@
   border: 2px solid #ffd700;
 }
 
-#resume:hover{
+#resume:hover {
   border: 2px solid #ffd700;
   background-color: #333;
   color: #ffd700;
 }
+
 .nav-list li {
   margin-right: 1rem;
 }
@@ -90,7 +94,7 @@
     transition: transform 0.3s ease;
   }
 
-  .menu-toggle:checked ~ .nav-list {
+  .menu-toggle:checked~.nav-list {
     display: block;
     transform: scaleY(1);
   }
