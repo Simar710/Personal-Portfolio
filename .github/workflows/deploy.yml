@@ -20,11 +20,20 @@ jobs:
       - name: Install, build, and upload site
         uses: withastro/action@v2
       
+      - name: Delete previous artifact (if exists)
+        run: |
+          gh api --method DELETE \
+            -H "Accept: application/vnd.github.v3+json" \
+            /repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload built site
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: dist # Ensure this matches your Astro build output
+          path: dist
+          retention-days: 1 # Optional, to auto-delete old artifacts
 
   deploy:
     needs: build
@@ -42,5 +51,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: github-pages
