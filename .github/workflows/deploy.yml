@@ -14,20 +14,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout your repository
         uses: actions/checkout@v4
 
-      - name: Build site with Astro
+      - name: Install, build, and upload your site
         uses: withastro/action@v2
-
-      - name: Debug:List contents of dist folder
-        run: ls -la dist/
-
-      - name: Upload built site artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./dist/
-          name: github-pages
+        # Optionally provide inputs:
+        # with:
+        #   path: .            # The root location of your Astro project (if different)
+        #   node-version: 20   # Defaults to 20
+        #   package-manager: pnpm@latest
 
   deploy:
     needs: build
@@ -38,4 +34,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
