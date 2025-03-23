@@ -20,7 +20,7 @@ jobs:
       - name: Build site with Astro
         uses: withastro/action@v2
 
-      - name: Debug: List contents of dist folder
+      - name: Debug:List contents of dist folder
         run: ls -la dist/
 
       - name: Upload built site artifact
